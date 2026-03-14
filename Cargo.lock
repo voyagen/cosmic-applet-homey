@@ -827,13 +827,11 @@ dependencies = [
 name = "cosmic-applet-homey"
 version = "0.1.0"
 dependencies = [
- "ashpd 0.12.3",
  "libcosmic",
  "open",
  "tracing",
  "tracing-log",
  "tracing-subscriber",
- "url",
 ]
 
 [[package]]

@@ -1,3 +1,7 @@
+mod window;
+
+use window::Window;
+
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 fn main() -> cosmic::iced::Result {
@@ -6,5 +10,5 @@ fn main() -> cosmic::iced::Result {
 
     tracing::info!("Starting cosmic-applet-homey v{VERSION}");
 
-    cosmic_applet_homey::run()
+    cosmic::applet::run::<Window>(())
 }

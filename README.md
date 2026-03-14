@@ -16,12 +16,6 @@ The applet adds a Homey button to the COSMIC panel. Clicking it opens the Homey 
 just install
 ```
 
-This installs:
-
-- the applet binary to `~/.local/bin`
-- the desktop entry to `~/.local/share/applications`
-- the app icon to `~/.local/share/icons/hicolor/512x512/apps`
-
 After installing, restart the COSMIC panel or log out and back in, then add `Homey` from COSMIC Settings -> Desktop -> Panel or Dock.
 
 ## Development
