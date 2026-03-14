@@ -1,10 +1,8 @@
 use cosmic::app::Core;
-use cosmic::widget::icon;
 use cosmic::Element;
 
 const APP_ID: &str = "com.github.cosmic-applet-homey";
 const HOMEY_URL: &str = "https://my.homey.app/";
-const ICON_BYTES: &[u8] = include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/icon.png"));
 
 #[derive(Debug, Clone)]
 pub enum Message {
@@ -43,19 +41,16 @@ impl cosmic::Application for Window {
                 cosmic::app::Task::none()
             }
             Message::Surface(action) => {
-                cosmic::task::message(cosmic::Action::Cosmic(
-                    cosmic::app::Action::Surface(action),
-                ))
+                cosmic::task::message(cosmic::Action::Cosmic(cosmic::app::Action::Surface(action)))
             }
         }
     }
 
     fn view(&self) -> Element<'_, Self::Message> {
-        let icon_handle = icon::from_raster_bytes(ICON_BYTES);
         let button = self
             .core
             .applet
-            .icon_button_from_handle(icon_handle)
+            .icon_button(APP_ID)
             .on_press(Message::OpenHomey);
 
         Element::from(self.core.applet.applet_tooltip::<Message>(
