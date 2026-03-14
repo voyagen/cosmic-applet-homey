@@ -1,0 +1,17 @@
+/target
+/.claude
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Environment and local overrides
+.env
+.env.*
+.direnv/
+
+# Logs
+*.log

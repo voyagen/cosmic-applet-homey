@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Homey
+Comment=Open Homey smart home dashboard
+Type=Application
+Exec=cosmic-applet-homey
+Terminal=false
+Categories=COSMIC;
+Keywords=COSMIC;Homey;SmartHome;IoT;
+Icon=com.github.cosmic-applet-homey
+NoDisplay=true
+X-CosmicApplet=true
+X-HostWaylandDisplay=true
+X-CosmicHoverPopup=Auto
+X-OverflowPriority=50
